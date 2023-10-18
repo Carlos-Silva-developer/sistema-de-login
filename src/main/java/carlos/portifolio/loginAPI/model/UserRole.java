@@ -1,4 +1,4 @@
-package carlos.portifolio.loginAPI.domain;
+package carlos.portifolio.loginAPI.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

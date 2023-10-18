@@ -1,9 +1,10 @@
-package carlos.portifolio.loginAPI.domain;
+package carlos.portifolio.loginAPI.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
 
 import javax.persistence.*;
 
@@ -13,9 +14,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Getter @Setter
 @EqualsAndHashCode(of = "permId")
-@ToString(of = "permId")
 public class Permissions {
-
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long permId;

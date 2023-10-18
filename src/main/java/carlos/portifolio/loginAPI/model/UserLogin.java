@@ -1,4 +1,4 @@
-package carlos.portifolio.loginAPI.domain;
+package carlos.portifolio.loginAPI.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -15,6 +15,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id") @ToString(of = "id")
+@Table(name = "user_login")
 public class UserLogin {
 
     @Id
@@ -34,7 +35,7 @@ public class UserLogin {
     @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Permissions> permissoes = new ArrayList<>();
 
-    public void adicionarPermissao(Permissions permissao) {
+    public void addPermission(Permissions permissao) {
         this.permissoes.add(permissao);
         permissao.setUserId(this);
     }
