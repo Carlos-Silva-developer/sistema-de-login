@@ -26,7 +26,6 @@ public class JWTCreator {
         JWTObject object = new JWTObject();
         token = token.replace(prefix, "");
         Claims claims = (Claims) Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
-//        Claims claims = Jwts.parser().setSigningKey(key).parseClaimsJws(token).getBody();
         object.setSubject(claims.getSubject());
         object.setExpiration(claims.getExpiration());
         object.setIssuedAt(claims.getIssuedAt());

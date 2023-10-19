@@ -20,7 +20,7 @@ public class Permissions {
     private Long permId;
 
     @Enumerated(STRING)
-    private UserRole funcao;
+    private UserRole permFuncao;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
