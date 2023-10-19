@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface UserRepository extends JpaRepository<UserLogin, Long> {
 
-    //para o jpa devemos usar as nomeclaturas da aplicação
+    //para o jpa devemos usar as nomeclaturas da aplicação, nome da entidade e seus atributos no java
     @Query("select ul from UserLogin ul where ul.userName = (:userName)")
     public UserLogin findByUserName(@Param("userName") String userName);
 
